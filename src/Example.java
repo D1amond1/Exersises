@@ -1,4 +1,15 @@
-package PACKAGE_NAME;
+public class Example<R> {
+    private String info = "";
 
-public class Example {
+    public String getInfo() {
+        return info;
+    }
+
+    public void addToString(R r){
+        if(this.info.isEmpty()){
+            this.info = this.info + r.toString();
+        }else{
+            this.info = this.info + "\n" + r.toString();
+        }
+    }
 }
